@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/cofeeOrderHomeFragment">
+
+
+    <fragment
+        android:id="@+id/loginPageFragment"
+        android:name="com.devroid.devroidnavigation.LoginPageFragment"
+        android:label="fragment_login_page"
+        tools:layout="@layout/fragment_login_page">
+        <action
+            android:id="@+id/action_loginPageFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.devroid.devroidnavigation.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_detailsPageFragment"
+            app:destination="@id/detailsPageFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/detailsPageFragment"
+        android:name="com.devroid.devroidnavigation.DetailsPageFragment"
+        android:label="fragment_details_page"
+        tools:layout="@layout/fragment_details_page" />
+
+
+    <fragment
+        android:id="@+id/cofeeOrderHomeFragment"
+        android:name="com.devroid.devroidnavigation.cofee_ordering.CoffeeOrderHomeFragment"
+        android:label="fragment_cofee_order_home"
+        tools:layout="@layout/fragment_coffee_order_home" />
+
+
+</navigation>
