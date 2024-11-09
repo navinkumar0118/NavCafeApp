@@ -1,5 +1,5 @@
 # NavCafeApp
-Coffee Ordering App (jetpack navigation, view binding, clean architecture, jetpack components)
+Coffee Ordering App (jetpack navigation, view binding, clean architecture, jetpack components, View model, Data binding)
 
 Simple Kotlin Android app for beginners to understand the UI logic using navigation component, view binding, data binding, view model, and single activity structure
 
