@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.devroid.devroidnavigation.R
@@ -70,6 +71,16 @@ class CoffeeOrderHomeFragment : Fragment() {
                 updateLatestValues()
             }
         }
+
+
+        // Create the observer which updates the UI.
+        val grandTotalListener = Observer<Int> { value ->
+            _binding.grandTotal.text = value.toString()
+        }
+
+        // Observe the LiveData, passing in this activity as the LifecycleOwner and the observer.
+        viewModel.grandTotalLiveData.observe(viewLifecycleOwner, grandTotalListener)
+
     }
 
 
@@ -83,7 +94,6 @@ class CoffeeOrderHomeFragment : Fragment() {
         _binding.c2.productAmount2.text = viewModel.coffee2Amount.toString()
         _binding.c2.quantityCount2.text = viewModel.coffee2Quantity.toString()
 
-        _binding.grandTotal.text = viewModel.grandTotal.toString()
     }
 
 

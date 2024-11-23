@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/cofeeOrderHomeFragment">
+    app:startDestination="@id/livedataExampleFragment">
 
 
 
@@ -12,6 +12,11 @@
         android:name="com.devroid.devroidnavigation.cofee_ordering.CoffeeOrderHomeFragment"
         android:label="fragment_cofee_order_home"
         tools:layout="@layout/fragment_coffee_order_home" />
+    <fragment
+        android:id="@+id/livedataExampleFragment"
+        android:name="com.devroid.devroidnavigation.livedata_example.LivedataExampleFragment"
+        android:label="fragment_livedata_example"
+        tools:layout="@layout/fragment_livedata_example" />
 
 
 </navigation>
