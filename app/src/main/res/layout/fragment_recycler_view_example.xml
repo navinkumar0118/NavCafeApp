@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.devroid.android_concepts.recycler_view.RecyclerViewExampleFragment"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Contacts"
+        android:textSize="24dp"
+        android:fontFamily="@font/playwrite_variable"
+        />
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myContactsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+
+
+</LinearLayout>

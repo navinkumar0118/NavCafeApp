@@ -1,4 +1,4 @@
-package com.devroid.devroidnavigation
+package com.devroid.android_concepts
 
 import org.junit.Test
 

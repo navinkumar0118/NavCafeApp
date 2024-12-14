@@ -1,4 +1,4 @@
-package com.devroid.devroidnavigation.cofee_ordering
+package com.devroid.android_concepts.cofee_ordering
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

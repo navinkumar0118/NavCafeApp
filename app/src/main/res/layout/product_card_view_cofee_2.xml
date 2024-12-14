@@ -14,7 +14,7 @@
 
 
         <ImageView
-            android:id="@+id/productImg2"
+            android:id="@+id/contactImageView"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/cofee2"
@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/productName2"
+            android:id="@+id/contactName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -33,7 +33,7 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@id/productAmount2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/productImg2"
+            app:layout_constraintStart_toEndOf="@+id/contactImageView"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -49,8 +49,8 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/countLayout"
             app:layout_constraintEnd_toStartOf="@id/productAmount2"
-            app:layout_constraintStart_toEndOf="@id/productImg2"
-            app:layout_constraintTop_toBottomOf="@id/productName2" />
+            app:layout_constraintStart_toEndOf="@id/contactImageView"
+            app:layout_constraintTop_toBottomOf="@id/contactName" />
 
         <TextView
             android:id="@+id/productAmount2"
@@ -68,7 +68,7 @@
             app:layout_constraintBottom_toTopOf="@id/countLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/productAmountHeading"
-            app:layout_constraintTop_toBottomOf="@id/productName2" />
+            app:layout_constraintTop_toBottomOf="@id/contactName" />
 
 
         <LinearLayout
@@ -83,7 +83,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/productImg2">
+            app:layout_constraintStart_toEndOf="@+id/contactImageView">
 
             <Button
                 android:id="@+id/decrementCountButton2"

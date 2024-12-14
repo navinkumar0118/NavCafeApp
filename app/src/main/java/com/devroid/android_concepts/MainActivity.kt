@@ -1,7 +1,8 @@
-package com.devroid.devroidnavigation
+package com.devroid.android_concepts
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.devroid.devroidconcept.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

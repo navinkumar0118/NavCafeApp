@@ -3,20 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/livedataExampleFragment">
+    app:startDestination="@id/recyclerViewExampleFragment">
 
 
 
     <fragment
         android:id="@+id/cofeeOrderHomeFragment"
-        android:name="com.devroid.devroidnavigation.cofee_ordering.CoffeeOrderHomeFragment"
+        android:name="com.devroid.android_concepts.cofee_ordering.CoffeeOrderHomeFragment"
         android:label="fragment_cofee_order_home"
         tools:layout="@layout/fragment_coffee_order_home" />
     <fragment
         android:id="@+id/livedataExampleFragment"
-        android:name="com.devroid.devroidnavigation.livedata_example.LivedataExampleFragment"
+        android:name="com.devroid.android_concepts.livedata_example.LivedataExampleFragment"
         android:label="fragment_livedata_example"
         tools:layout="@layout/fragment_livedata_example" />
+    <fragment
+        android:id="@+id/recyclerViewExampleFragment"
+        android:name="com.devroid.android_concepts.recycler_view.RecyclerViewExampleFragment"
+        android:label="fragment_recycler_view_example"
+        tools:layout="@layout/fragment_recycler_view_example" />
 
 
 </navigation>

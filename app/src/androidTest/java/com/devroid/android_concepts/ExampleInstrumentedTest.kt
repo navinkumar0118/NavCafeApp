@@ -1,4 +1,4 @@
-package com.devroid.devroidnavigation
+package com.devroid.android_concepts
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

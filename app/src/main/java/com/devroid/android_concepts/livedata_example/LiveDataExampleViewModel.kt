@@ -1,4 +1,4 @@
-package com.devroid.devroidnavigation.livedata_example
+package com.devroid.android_concepts.livedata_example
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

@@ -1,17 +1,13 @@
-package com.devroid.devroidnavigation.cofee_ordering
+package com.devroid.android_concepts.cofee_ordering
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.devroid.devroidnavigation.R
-import com.devroid.devroidnavigation.databinding.FragmentCoffeeOrderHomeBinding
+import com.devroid.devroidconcept.databinding.FragmentCoffeeOrderHomeBinding
 
 
 class CoffeeOrderHomeFragment : Fragment() {

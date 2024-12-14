@@ -1,4 +1,4 @@
-package com.devroid.devroidnavigation.livedata_example
+package com.devroid.android_concepts.livedata_example
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.devroid.devroidnavigation.R
-import com.devroid.devroidnavigation.cofee_ordering.CoffeeOrderHomeViewModel
-import com.devroid.devroidnavigation.databinding.FragmentCoffeeOrderHomeBinding
-import com.devroid.devroidnavigation.databinding.FragmentLivedataExampleBinding
+import com.devroid.devroidconcept.databinding.FragmentLivedataExampleBinding
 
 
 class LivedataExampleFragment : Fragment() {
