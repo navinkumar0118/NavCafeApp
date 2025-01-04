@@ -35,11 +35,32 @@ class RecyclerViewExampleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val dataset = arrayOf("Navinkumar", "Suniil", "Solomon", "Austin", "Aswin","Navinkumar", "Suniil", "Solomon", "Austin", "Aswin","Navinkumar", "Suniil", "Solomon", "Austin", "Aswin")
+  /*      val dataset = arrayOf("Navinkumar", "Suniil", "Solomon", "Austin", "Aswin","Navinkumar", "Suniil", "Solomon", "Austin", "Aswin","Navinkumar", "Suniil", "Solomon", "Austin", "Aswin")
 
         recyclerView = view.findViewById(R.id.myContactsRecyclerView)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = ContactsListAdapter(dataset)
+        recyclerView.adapter = ContactsListAdapter(dataset)*/
+
+
+
+        val list: ArrayList<Contact> = ArrayList()
+        list.add(Contact("Navin", "7708551525",""))
+        list.add(Contact("Solomon", "8y8y8y98",""))
+        list.add(Contact("Aswin", "8t868686",""))
+        list.add(Contact("Austin", "ss898",""))
+        list.add(Contact("XYZ", "886868678",""))
+        list.add(Contact("Navin", "7708551525",""))
+        list.add(Contact("Solomon", "8y8y8y98",""))
+        list.add(Contact("Aswin", "8t868686",""))
+        list.add(Contact("Austin", "ss898",""))
+        list.add(Contact("XYZ", "886868678",""))
+
+        recyclerView = view.findViewById(R.id.myContactsRecyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter = DemoListAdapter(list)
+
+
+
 
     }
 
