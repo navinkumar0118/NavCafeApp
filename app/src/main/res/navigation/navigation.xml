@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/recyclerViewExampleFragment">
+    app:startDestination="@id/apiDemoHomePageFragment">
+
+
 
 
 
@@ -22,6 +24,11 @@
         android:name="com.devroid.android_concepts.recycler_view.RecyclerViewExampleFragment"
         android:label="fragment_recycler_view_example"
         tools:layout="@layout/fragment_recycler_view_example" />
+    <fragment
+        android:id="@+id/apiDemoHomePageFragment"
+        android:name="com.devroid.android_concepts.api_call_example.ApiDemoHomePageFragment"
+        android:label="fragment_api_demo_home_page"
+        tools:layout="@layout/fragment_api_demo_home_page" />
 
 
 </navigation>
