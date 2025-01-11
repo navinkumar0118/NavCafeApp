@@ -7,8 +7,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-object ApiBaseClient{
-    private const val BASE_URL ="https://fakestoreapi.com/"
+object ApiBaseClient {
+
+    private const val BASE_URL = "https://fakestoreapi.com/"
 
     fun getInstance(): Retrofit {
 
@@ -16,9 +17,9 @@ object ApiBaseClient{
         val interceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
         val clientBuilder: OkHttpClient.Builder =
             client.newBuilder().connectTimeout(30, TimeUnit.SECONDS) // Connection timeout
-            .readTimeout(30, TimeUnit.SECONDS)    // Read timeout
-            .writeTimeout(30, TimeUnit.SECONDS)   // Write timeout
-            .addInterceptor(interceptor as HttpLoggingInterceptor)
+                .readTimeout(30, TimeUnit.SECONDS)    // Read timeout
+                .writeTimeout(30, TimeUnit.SECONDS)   // Write timeout
+                .addInterceptor(interceptor as HttpLoggingInterceptor)
 
 
 

@@ -5,6 +5,12 @@ import retrofit2.http.GET
 
 interface ApiBaseInterface {
 
-    @GET("/products")
+    @GET("products")
     fun getProductsListApi(): Call<ArrayList<ProductDetail>>
+
+    @GET("products/categories")
+    fun getCategoriesApi() : Call<ArrayList<String>>
+
+
+
 }
