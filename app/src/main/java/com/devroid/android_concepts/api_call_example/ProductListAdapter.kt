@@ -3,6 +3,7 @@ package com.devroid.android_concepts.api_call_example
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -23,11 +24,18 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
         val productNameTextView: TextView
         val productPriceTextView: TextView
         val productImageView: ImageView
+        val quantityCountTextview: TextView
+        val decrementCountButton: Button
+        val incrementCountButton: Button
 
         init {
             productNameTextView = view.findViewById(R.id.productName)
             productPriceTextView = view.findViewById(R.id.productPrice)
             productImageView = view.findViewById(R.id.productImageView)
+            incrementCountButton = view.findViewById(R.id.incrementCountButton)
+            quantityCountTextview = view.findViewById(R.id.quantityCountTextview)
+            decrementCountButton = view.findViewById(R.id.decrementCountButton)
+
         }
 
     }
@@ -51,7 +59,8 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
         val product = productsList[position]
 
         holder.productNameTextView.text = product.title
-        holder.productPriceTextView.text = product.price.toString()
+        holder.productPriceTextView.text = "₹ " + product.price.toString()
+        holder.quantityCountTextview.text = product.quantity.toString()
 
 
         Picasso.get()
@@ -62,8 +71,19 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
             .error(R.drawable.cofee1)
             .into(holder.productImageView) //image
 
-        Picasso.get().isLoggingEnabled = true
 
+        holder.incrementCountButton.setOnClickListener {
+            product.quantity += 1
+            notifyDataSetChanged()
+        }
+
+        holder.decrementCountButton.setOnClickListener {
+            if (product.quantity > 0) {
+                product.quantity -= 1
+                notifyDataSetChanged()
+
+            }
+        }
 
     }
 

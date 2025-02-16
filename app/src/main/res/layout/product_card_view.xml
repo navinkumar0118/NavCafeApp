@@ -3,9 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
     android:backgroundTint="@color/bg_card_color"
     android:elevation="8dp"
-    android:layout_marginBottom="8dp"
+    android:paddingVertical="16dp"
     app:cardCornerRadius="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,9 +17,9 @@
 
         <ImageView
             android:id="@+id/productImageView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerInside"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -48,9 +49,55 @@
             android:fontFamily="@font/playwrite_variable"
             android:text=""
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/quantityLayout"
+            app:layout_constraintHorizontal_weight="1"
             app:layout_constraintStart_toEndOf="@id/productImageView"
             app:layout_constraintTop_toBottomOf="@id/productName" />
+
+
+        <LinearLayout
+            android:id="@+id/quantityLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/productName">
+
+
+            <Button
+                android:id="@+id/decrementCountButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text=" - " />
+
+            <TextView
+                android:id="@+id/quantityCountTextview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/playwrite_variable"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text=""
+                android:textSize="18sp" />
+
+
+            <Button
+                android:id="@+id/incrementCountButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text=" + " />
+
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
