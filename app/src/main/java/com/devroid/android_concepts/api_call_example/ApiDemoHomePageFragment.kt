@@ -8,10 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.devroid.android_concepts.livedata_example.LiveDataExampleViewModel
-import com.devroid.devroidconcept.R
 import com.devroid.devroidconcept.databinding.FragmentApiDemoHomePageBinding
-import com.devroid.devroidconcept.databinding.FragmentLivedataExampleBinding
 
 class ApiDemoHomePageFragment : Fragment() {
 
