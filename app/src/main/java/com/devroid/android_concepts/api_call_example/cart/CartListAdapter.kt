@@ -1,4 +1,4 @@
-package com.devroid.android_concepts.api_call_example
+package com.devroid.android_concepts.api_call_example.cart
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,15 +7,22 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.devroid.android_concepts.api_call_example.ProductDetail
 import com.devroid.devroidconcept.R
 import com.squareup.picasso.Picasso
 
-class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
-    RecyclerView.Adapter<ProductListAdapter.ProductsViewHolder>() {
+class CartListAdapter(private var cartList: ArrayList<ProductDetail>, private var callback: ProductsCallBack) :
+    RecyclerView.Adapter<CartListAdapter.ProductsViewHolder>() {
+
+    ///call back functions to the UI Fragment
+    interface ProductsCallBack {
+        fun onIncrementPressed(productDetail: ProductDetail)
+        fun onDecrementPressed(productDetail: ProductDetail)
+    }
 
 
     //First Step
-    override fun getItemCount() = productsList.size
+    override fun getItemCount() = cartList.size
 
 
     //Step 2 - ViewHolder class
@@ -45,7 +52,7 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): ProductListAdapter.ProductsViewHolder {
+    ): ProductsViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.product_card_view, parent, false)
 
@@ -54,9 +61,9 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
 
 
     //Final step - UI DATA map -> draw
-    override fun onBindViewHolder(holder: ProductListAdapter.ProductsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ProductsViewHolder, position: Int) {
 
-        val product = productsList[position]
+        val product = cartList[position]
 
         holder.productNameTextView.text = product.title
         holder.productPriceTextView.text = "₹ " + product.price.toString()
@@ -73,24 +80,19 @@ class ProductListAdapter(private var productsList: ArrayList<ProductDetail>) :
 
 
         holder.incrementCountButton.setOnClickListener {
-            product.quantity += 1
-            notifyDataSetChanged()
+            callback.onIncrementPressed(product)
         }
 
         holder.decrementCountButton.setOnClickListener {
-            if (product.quantity > 0) {
-                product.quantity -= 1
-                notifyDataSetChanged()
-
-            }
+            callback.onDecrementPressed(product)
         }
 
     }
 
 
     // Method to update the list and notify the adapter
-    fun updateProduct(newItemList: ArrayList<ProductDetail>) {
-        productsList = newItemList
+    fun updateCartList(newItemList: ArrayList<ProductDetail>) {
+        cartList = newItemList
         notifyDataSetChanged() // Notify that the data has changed
     }
 

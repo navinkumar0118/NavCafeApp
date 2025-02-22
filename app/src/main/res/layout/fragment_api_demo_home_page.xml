@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.devroid.android_concepts.api_call_example.ApiDemoHomePageFragment"
+    tools:context="com.devroid.android_concepts.api_call_example.home.ApiDemoHomePageFragment"
     android:orientation="vertical"
     android:padding="16dp">
 
@@ -26,6 +26,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHECKOUT CART"
+        />
 
 
 </LinearLayout>

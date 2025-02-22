@@ -26,9 +26,18 @@
         tools:layout="@layout/fragment_recycler_view_example" />
     <fragment
         android:id="@+id/apiDemoHomePageFragment"
-        android:name="com.devroid.android_concepts.api_call_example.ApiDemoHomePageFragment"
+        android:name="com.devroid.android_concepts.api_call_example.home.ApiDemoHomePageFragment"
         android:label="fragment_api_demo_home_page"
-        tools:layout="@layout/fragment_api_demo_home_page" />
+        tools:layout="@layout/fragment_api_demo_home_page" >
+        <action
+            android:id="@+id/action_apiDemoHomePageFragment_to_cartPageFragment"
+            app:destination="@id/cartPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartPageFragment"
+        android:name="com.devroid.android_concepts.api_call_example.cart.CartPageFragment"
+        android:label="fragment_cart_page"
+        tools:layout="@layout/fragment_cart_page" />
 
 
 </navigation>

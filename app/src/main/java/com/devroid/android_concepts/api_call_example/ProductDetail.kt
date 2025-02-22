@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 class ProductDetail(
     val id : Int,
     val title : String,
-    val price : Double,
+    var price : Double,
     val description : String,
     val image : String,
     val rating : Rating,
